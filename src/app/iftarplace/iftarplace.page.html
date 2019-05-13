@@ -1,0 +1,37 @@
+
+<ion-header>
+    <!-- <ion-back-button class="show-back-button"></ion-back-button> -->
+
+  <ion-toolbar>
+      <!-- <ion-back-button defaultHref="tab2"></ion-back-button> -->
+
+    <ion-title>Iftar place</ion-title>
+    <ion-buttons slot="start">
+        <ion-back-button defaultHref="/tab2"></ion-back-button>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-list>
+
+    <ion-item>
+        <ion-label position="floating">Info</ion-label>
+        <ion-input [(ngModel)]="locations.info" type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+          <ion-label position="floating">Latitude</ion-label>
+          <ion-input [(ngModel)]="locations.latitude" type="text"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label position="floating">Longitude</ion-label>
+            <ion-input [(ngModel)]="locations.longitude" type="text"></ion-input>
+          </ion-item>
+
+              <ion-button (click)="addLocation(locations)" expand="block">Add </ion-button>
+              
+    </ion-list>
+
+</ion-content>

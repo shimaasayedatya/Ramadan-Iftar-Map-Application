@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>giftplacemodify</ion-title>
+    <ion-buttons slot="start">
+        <ion-back-button defaultHref="/tab2"></ion-back-button>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+    <ion-list>
+        <ion-item-sliding *ngFor='let gift of myObject'>
+          <ion-item>
+            <ion-avatar item-start>
+              <img src="assets/imgs/gps.png">
+            </ion-avatar>
+            <ion-label>{{gift[1]['info']}}</ion-label>
+          </ion-item>
+          <ion-item-options side="start">
+              <ion-button color="primary"
+               (click)="showPrompt(gift[0] ,gift[1]['info'],gift[1]['latitude'],gift[1]['longitude'])">
+                <ion-icon name="ios-create">
+                </ion-icon>
+                Edit
+              </ion-button>
+      
+       
+
+         
+          </ion-item-options>
+
+          <ion-item-options side="end">
+              <ion-button color="danger"  (click)='removeLocation(gift[0])'>
+                <ion-icon name="ios-trash">
+                </ion-icon>
+                Delete
+              </ion-button>
+            </ion-item-options>
+
+        </ion-item-sliding>
+      </ion-list>
+
+</ion-content>

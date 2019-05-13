@@ -1,0 +1,25 @@
+<ion-header>
+
+  <ion-toolbar>
+      <!-- <ion-back-button defaultHref="iftarplace"></ion-back-button> -->
+
+    <ion-title>
+      Add
+    </ion-title>
+    <!-- <ion-buttons slot="start">
+        <ion-back-button defaultHref="/giftplace"></ion-back-button>
+      </ion-buttons> -->
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-button  color="danger" expand="block" (click)="goToAddGitPage()" >Add places of gift
+    <!-- <ion-back-button class="show-back-button"></ion-back-button> -->
+  </ion-button>
+  <br> <br>
+  <ion-button color="secondary" expand="block" (click)="goToAddIftarPage()">Add collective iftar places</ion-button>
+  <br> <br>
+  <ion-button expand="block" (click)="goToShowGitPage()">Gift places</ion-button>
+  <br> <br>
+  <ion-button expand="block" (click)="goToShowIftarPage()">Collective iftar places</ion-button>
+</ion-content>
